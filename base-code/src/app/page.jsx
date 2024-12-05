@@ -1,28 +1,7 @@
-"use client";
 import React from "react";
-// import RootLayout from "../layout.jsx";
-
-import Grid from "../components/Grid";
 
 export default function Page() {
-  // Define content for specific grid cells
-  const content = [
-    <h1 className="text-xl font-bold">Heading 1</h1>, // Cell 1
-    <button className="px-4 py-2 bg-green-500 text-white rounded">
-      Click Me
-    </button>, // Cell 2
-    <img
-      src="https://via.placeholder.com/100"
-      alt="Placeholder"
-      className="rounded"
-    />, // Cell 3
-    <p className="text-sm text-gray-300">This is a paragraph in Cell 4.</p>, // Cell 4
-    null, // Cell 5 (default content will show)
-    <h2 className="text-lg font-semibold">Another Heading</h2>, // Cell 6
-    // Add more content or leave null for other cells
-  ];
-
-  return <Grid content={content} />;
+  return <div></div>;
 }
 
 // "use client";
