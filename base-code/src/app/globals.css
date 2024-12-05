@@ -21,6 +21,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   cursor: none;
+  
 }
 
 .contact-wrap:hover .hover-color {
@@ -37,14 +38,4 @@ body {
 
 .right-top-wrap:hover .hover-color {
   color: #e1e3fc;
-}
-
-.changeHappen::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%; /* Adjust this value to make the border shorter */
-  border-top: 2px solid #9ab2e5; /* Adjust the border style and color as needed */
 }

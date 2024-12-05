@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} h-full antialiased selection:bg-[#E1E3FC] selection:text-[#365BAD]`}
       >
-        <Grid/>
+        <Grid />
         {children}
         <Cursor />
       </body>
