@@ -7,7 +7,7 @@
   --foreground: #365bad;
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,14 +28,14 @@ body {
   color: #e1e3fc;
 }
 
-.right-top-wrap:hover .hover-transform {
+.Intro:hover .hover-transform {
   transform: translate3d(0px, -0.6rem, 0px) rotate(25deg);
 }
 
-.right-top-wrap:hover .hover-move-up {
+.Intro:hover .hover-move-up {
   transform: translateY(-0.5rem);
 }
 
-.right-top-wrap:hover .hover-color {
+.Intro:hover .hover-color {
   color: #e1e3fc;
 }

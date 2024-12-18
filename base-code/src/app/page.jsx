@@ -1,62 +1,107 @@
 import React from "react";
+import { GridItem } from "@/components/GridItem";
+import Intro from "@/components/intro";
+import Image from "next/image";
+import Time from "@/components/time";
+import Date from "@/components/date";
+import Menu from "@/components/menu";
+import Socials from "@/components/socials";
 
 export default function Page() {
-  return <div></div>;
+  const gridContent = [
+    // First Row
+    {
+      content: (
+        <div className="h-full w-full p-[7vh]">
+          <div className="relative h-full w-full ">
+            <Image
+              src="/Logo(Text).svg"
+              alt="Logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </div>
+      ),
+      rowSpan: 1,
+      colSpan: 1,
+      rowStart: 1,
+      colStart: 1,
+    },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 1, colStart: 2 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 1, colStart: 3 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 1, colStart: 4 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 1, colStart: 5 },
+    { content: <><Time/><Date/></>, rowSpan: 1, colSpan: 1, rowStart: 1, colStart: 6 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 2, colStart: 1 },
+    {
+      content: (
+        <div className="h-full w-full p-2">
+          <div className="relative h-full w-full">
+            <Image
+              src="/Landing-Image.png"
+              alt="Landing Image"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </div>
+      ),
+      rowSpan: 2,
+      colSpan: 2,
+      rowStart: 2,
+      colStart: 2,
+    },
+    {
+      content: <Intro/>,
+      rowSpan: 1,
+      colSpan: 1,
+      rowStart: 2,
+      colStart: 4,
+    },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 2, colStart: 5 },
+    { content: <Menu/>, rowSpan: 1, colSpan: 1, rowStart: 2, colStart: 6 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 3, colStart: 1 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 3, colStart: 4 },
+    {
+      content: (
+        <div className="h-full w-full p-[7vh]">
+          <div className="relative h-full w-full">
+            <Image
+              src="/Logo-Vector.svg"
+              alt="Logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </div>
+      ),
+      rowSpan: 1,
+      colSpan: 1,
+      rowStart: 3,
+      colStart: 5,
+    },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 3, colStart: 6 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 4, colStart: 1 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 4, colStart: 2 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 4, colStart: 3 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 4, colStart: 4 },
+    { content: "", rowSpan: 1, colSpan: 1, rowStart: 4, colStart: 5 },
+    { content: <Socials/>, rowSpan: 1, colSpan: 1, rowStart: 4, colStart: 6 },
+  ];
+
+  return (
+    <>
+      {gridContent.map((item, index) => (
+        <GridItem
+          key={index}
+          content={item.content}
+          rowSpan={item.rowSpan}
+          colSpan={item.colSpan}
+          rowStart={item.rowStart}
+          colStart={item.colStart}
+        />
+      ))}
+    </>
+  );
 }
-
-// "use client";
-// import React, { useState, useEffect } from "react";
-// import Image from "next/image";
-// import RightTopWrap from "../components/RightTopWrap";
-
-// export default function Home() {
-// const words = ["Designer", "Developer", "Photographer", "Writer"];
-// const [index, setIndex] = useState(0);
-
-// useEffect(() => {
-//   const interval = setInterval(() => {
-//     setIndex((prevIndex) => (prevIndex + 1) % words.length);
-//   }, 2000);
-
-//   return () => clearInterval(interval);
-// });
-
-//   return <div></div>;
-// }
-
-// <main className="flex flex-row h-full w-full grow divide-x divide-[#9ab2e5]">
-{
-  /* <div className="left-wrap flex flex-col w-[67%] divide-y divide-[#9ab2e5]">
-    <div className="left-top-wrap h-[56%]">
-    <Image
-        className="object-cover w-full h-full"
-        src="/Landing-Image.png"
-        alt="Person holding a Camera"
-        width={500}
-        height={50}
-      />
-    </div>
-    <div className="left-bottom-wrap grow">Left Bottom</div>
-  </div>
-  <div className="right-wrap flex flex-col grow divide-y divide-[#9ab2e5] changeHappen relative">
-    <RightTopWrap words={words} index={index} />
-    <div className="right-bottom-wrap grow">Right Bottom</div>
-  </div> */
-  /* </main> */
-}
-// "use client";
-// import React from "react";
-// import Grid from "../components/Grid";
-
-// export default function Home() {
-//   const cellContents = [
-//     <div key="cell-1">Content for Cell 1</div>,
-//     // Add more content for other cells if needed
-//   ];
-
-//   return (
-//     <div>
-//       <Grid cellContents={cellContents} />
-//     </div>
-//   );
-// }

@@ -56,7 +56,7 @@ const Grid = () => {
     <>
       <div
         style={{
-          display: "flex",
+          display: "grid",
           flexWrap: "wrap",
           // gap: "10px",
           padding: "1rem",
