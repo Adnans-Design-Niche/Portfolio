@@ -1,6 +1,6 @@
 import React from "react";
 import { GridItem } from "@/components/GridItem";
-import Intro from "@/components/intro";
+import Intro from "@/components/Intro";
 import Image from "next/image";
 import Time from "@/components/time";
 import Date from "@/components/date";
