@@ -1,6 +1,6 @@
 import React from "react";
 import { GridItem } from "../../components/GridItem";
-import Intro from "../../components/intro";
+import {Intro} from "@/components/intro";
 
 // Page component to render a grid layout with various content items
 export default function Page() {
