@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Cursor from "@/components/cursor";
 import React, { Suspense } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 // Initialize the Inter font with the Latin subset
 const inter = Inter({ subsets: ["latin"] });
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
           <div className="grid grid-rows-4 grid-cols-6 m-[2.4vh] gap-0 h-[90vh]">
             {children}
             <SpeedInsights />
+            <Analytics />
           </div>
         </Suspense>
 
