@@ -1,34 +1,37 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+"use client"; // Ensures this component runs only on the client-side
 
+import React, { useState, useEffect } from "react";
+
+// Time component to display the current time and day
 const Time = () => {
-    const [time, setTime] = useState('');
+  // State to store the formatted time and day
+  const [time, setTime] = useState("");
 
-    useEffect(() => {
-        const updateTime = () => {
-            const date = new Date();
-            const timeOptions = { hour: '2-digit', minute: '2-digit' };
-            const dayOptions = { weekday: 'long' };
+  useEffect(() => {
+    // Function to update the time and day
+    const updateTime = () => {
+      const date = new Date();
+      const timePart = date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+      const dayPart = date.toLocaleDateString([], { weekday: "long" });
+      setTime(`${timePart}, ${dayPart}`);
+    };
 
-            const timePart = date.toLocaleTimeString([], timeOptions);
-            const dayPart = date.toLocaleDateString([], dayOptions);
+    updateTime(); // Initial call to display the time immediately
 
-            setTime(`${timePart}, ${dayPart}`);
-        };
+    // Set an interval to update the time every second
+    const intervalId = setInterval(updateTime, 1000);
 
-        updateTime();
-        const intervalId = setInterval(updateTime, 1000);
+    // Cleanup function to clear the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
-        return () => clearInterval(intervalId);
-    }, []);
-
-    return (
-        <div className="absolute right-[1vw] top-[2vh]">
-            <div className="text-[0.8vw] font-normal">
-                {time}
-            </div>
-        </div>
-    );
+  return (
+    <div className="absolute right-[1vw] top-[2vh]">
+      <div className="text-[0.8vw] font-normal">
+        {time} {/* Display the formatted time and day */}
+      </div>
+    </div>
+  );
 };
 
 export default Time;
