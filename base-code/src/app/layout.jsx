@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: "Adnan's Portfolio",
     description: "Portfolio of Adnan Siddiqui showcasing projects and skills.",
-    url: "https://yourdomain.com", // Replace with your actual domain URL
+    url: "https://adn-memos.com", // Replace with your actual domain URL
     siteName: "Adnan's Portfolio",
     images: [
       {

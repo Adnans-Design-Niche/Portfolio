@@ -114,10 +114,10 @@ export default function Page() {
 
   return (
     <>
-      {/* Map through gridContent to render each GridItem */}
+      {/* Map through gridContent to render each Grid */}
       {gridContent.map((item, index) => (
         <Grid
-          key={index}               // Unique key for each GridItem
+          key={index}               // Unique key for each Grid
           content={item.content}    // Content to display in the grid cell
           rowSpan={item.rowSpan}    // Number of rows to span
           colSpan={item.colSpan}    // Number of columns to span

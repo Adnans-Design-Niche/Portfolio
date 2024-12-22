@@ -1,5 +1,5 @@
 import React from "react";
-import { GridItem } from "../../components/grid";
+import Grid from "@/components/grid";
 import Intro from "@/components/introduction";
 
 // Page component to render a grid layout with various content items
@@ -50,9 +50,9 @@ export default function Page() {
 
   return (
     <>
-      {/* Render each GridItem based on gridContent configuration */}
+      {/* Render each Grid based on gridContent configuration */}
       {gridContent.map((item, index) => (
-        <GridItem
+        <Grid
           key={index}               // Unique key for each grid item
           content={item.content}    // Content to be rendered inside the grid item
           rowSpan={item.rowSpan}    // Number of rows the item spans

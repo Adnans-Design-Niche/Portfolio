@@ -1,6 +1,6 @@
 import React from "react";
 
-// GridItem component to render individual grid cells with borders
+// Grid component to render individual grid cells with borders
 export const Grid = ({ content, rowSpan, colSpan, rowStart, colStart }) => {
   // Renders border elements around the grid item based on position
   const BorderElements = () => (
