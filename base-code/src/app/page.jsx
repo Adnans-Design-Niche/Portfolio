@@ -1,5 +1,5 @@
 import React from "react";
-import { GridItem } from "@/components/GridItem";
+import Grid from "@/components/grid";
 import Intro from "@/components/introduction";
 import Image from "next/image";
 import Time from "@/components/time";
@@ -116,7 +116,7 @@ export default function Page() {
     <>
       {/* Map through gridContent to render each GridItem */}
       {gridContent.map((item, index) => (
-        <GridItem
+        <Grid
           key={index}               // Unique key for each GridItem
           content={item.content}    // Content to display in the grid cell
           rowSpan={item.rowSpan}    // Number of rows to span

@@ -1,5 +1,5 @@
 import React from "react";
-import { GridItem } from "../../components/GridItem";
+import { GridItem } from "../../components/grid";
 import Intro from "@/components/introduction";
 
 // Page component to render a grid layout with various content items

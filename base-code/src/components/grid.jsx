@@ -1,7 +1,7 @@
 import React from "react";
 
 // GridItem component to render individual grid cells with borders
-export const GridItem = ({ content, rowSpan, colSpan, rowStart, colStart }) => {
+export const Grid = ({ content, rowSpan, colSpan, rowStart, colStart }) => {
   // Renders border elements around the grid item based on position
   const BorderElements = () => (
     <>
@@ -37,3 +37,5 @@ export const GridItem = ({ content, rowSpan, colSpan, rowStart, colStart }) => {
     </div>
   );
 };
+
+export default Grid;
