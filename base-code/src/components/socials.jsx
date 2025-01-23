@@ -6,7 +6,7 @@ import Image from "next/image";
 const Socials = () => {
   // Array of social media links with their respective labels
   const socialLinks = [
-    { href: "https://github.com/Adnans-Design-Niche", label: "Github" },
+    { href: "https://github.com/Adnan-Memos", label: "Github" },
     { href: "https://instagram.com/adn.memos", label: "Instagram" },
     { href: "https://www.behance.net/adn-memos", label: "Behance" },
     { href: "https://linkedin.com/in/adn-memos/", label: "LinkedIn" },
