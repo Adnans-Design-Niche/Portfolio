@@ -6,17 +6,17 @@ const Menu = () => {
   return (
     <div className="h-full w-full flex pt-[18vh] justify-center text-[#E1E3FC] space-x-[1.6vw] text-[1vw]">
       {/* Navigation link to the About page */}
-      <Link href="/about">
+      <Link href="#">
         About
       </Link>
 
       {/* Navigation link to the Articles page */}
-      <Link href="/articles">
+      <Link href="#">
         Articles
       </Link>
 
       {/* Navigation link to the Archives page */}
-      <Link href="/archives">
+      <Link href="#">
         Archives
       </Link>
     </div>
